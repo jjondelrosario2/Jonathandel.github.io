@@ -1,0 +1,88 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> JS-HTML integration</title>
+</head>
+
+<body>
+<h1> Difference JS Application -- Jonathan</h1>
+<p> this is my fifth page html page with javascript</p>
+
+<button onclick ="option()">choice between 2 cars</button>
+<script> 
+function option() {
+var person = prompt ('please enter your name');
+var userCar = prompt ('please enter the name of your car');
+var car1 = myCar(userCar);
+document.getElementById("demo1").innerHTML = 'Hello ' + person + '. That is a ' + car1;
+}
+
+function myCar(x) {
+if (x=== 'toyota' || x==='bmw')
+return 'cool cars';
+else 
+return 'not cool';
+}
+</script>
+
+<p id = 'demo1'>Car choice is....</p>'
+<hr><br>
+<hr><br>
+
+<button onclick="diffDate()"> Difference between your date 
+and today is </button>
+
+<script>
+function diffDate() {
+var nDate = new Date();
+var uChoice = prompt('Enter your date', 'yyyy-mm-dd');
+var oDate = new Date(uChoice);
+var difference = nDate.getTime() - oDate.getTime();
+console.log(difference);
+var diff_Days = difference/(1000*60*60*24);
+
+document.getElementById("demo2").innerHTML = 'The number of days between today and your date is ' +  pgreeting() + 'date is ' + diff_Days.toFixed(1);
+}
+</script>
+
+<p id = 'demo2'> Difference is in days....</p>
+
+<button onclick ="random()">click a random number</button>
+
+<script>
+function random () {
+var random = Math.random();
+var numbers = Math.floor((random*10)+1);
+console.log(numbers);
+document.getElementById('demo3').innerHTML = numbers;
+}
+</script>
+
+<p id = 'demo3'> what is your number....</p>
+
+<hr><br>
+
+<hr><br>   
+
+
+<button onclick="loop()"> Print out number from 1-10 </button>
+
+<script>
+
+function loop(x) {
+
+var text = "";
+var x = +prompt("what is the maxium you want to print?", '10')
+for (var i =0; i< x; i++)
+text += i + " ";
+}
+
+document.getElementById("demo2").innerHTML = 'The number are ' + text;
+}
+</script>
+
+<p id='demo2'> gagagag </button>
+
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!Doctype HTML>
+
+<html>
+
+<head>
+
+     <title> JS-HTML Intergration </title>
+
+</head>
+
+
+<body>
+
+
+ <h1> Let's Integrate HTML page with JS by jjondel </h1>
+
+    <p> This is my fifth HTML page with Javascript </p>
+
+    
+
+    <button onclick="pgreeting()"> Today's greeting is </button>
+
+        <script>
+
+        function pgreeting() {
+
+        var person = prompt ('Please enter your name')
+
+        document.getElementById("demo1").innerHTML = 'Hello ' + person 
+
+        + '! How are you today?';
+
+        }
+
+        </script>
+
+<p id='demo1'> Greetings for today is.... </p>
+
+  
+
+  <hr><br>
+
+    <button onclick="diffDate()"> Difference between Jun 15, 2021 and today is 
+
+    </button>
+
+    
+
+        <script>
+
+        function name() {
+
+        var nDate = new Date();
+		
+		var uChoice = prompt('Enter your date', 'yyyy-mm-dd');
+
+        var oDate = new Date(Uchoice);
+
+        console.log(difference);
+
+        var difference = nDate.getTime() - oDate.getTime();
+
+        var diff_Days = difference/(1000*60*60*24);
+
+        
+
+        document.getElementById("demo2").innerHTML = 'The number of days between today and your date is ' + diff_Days.toFixed(1);
+
+        }
+
+        </script>
+
+        
+
+        <p id='demo2'> Difference is in days....</p>
+
+<button onclick="Random Number()"> Your number from 1-10 is...
+
+    </button>
+
+<script>
+
+function random() {
+
+var random=Math.random();
+
+var numbers = math.floor((random * 10)+1);
+
+console.log(numbers);
+
+document.getElementById('Demo3').innerHTML = numbers;
+
+}
+
+</script>
+
+<p id='demo3'> Your number is.... </p>
+
+ 
+
+    <button onclick="option()"> Choice between 2 cars </button>
+
+        <script>
+
+        function option() {
+
+var person = prompt ('Please enter your name');
+
+var userCar = prompt ('Please enter the name of your car');
+
+var car1 = myCar(userCar);
+
+        document.getElementById("demo6").innerHTML = ' Hello ' + person + '. That is a ' + car1;
+}
+
+
+function myCar(x) {
+
+if (x==='toyota' || x='bmw')
+
+return 'Cool cars';
+
+else
+
+return 'Not cool car';
+
+}
+</script>
+
+
+<p id='demo6'> Car choice is.... </p>
+
+
+
+<hr><br>
+
+<hr><br>   
+
+
+<button onclick="loop()"> Print out number from 1-10 </button>
+
+<script>
+
+function loop(x) {
+
+var text = "";
+var x = +prompt("what is the maxium you want to print?", '10')
+for (var i =0; i< x; i++)
+text += i + " ";
+}
+
+document.getElementById("demo2").innerHTML = 'The number are ' + text;
+}
+</script>
+
+<p id='demo2'
+
+ 
+
+</body>
+
+</html>
+
